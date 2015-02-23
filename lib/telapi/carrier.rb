@@ -15,7 +15,7 @@ module Telapi
       end
 
       # Returns a Telapi::Carrier object given a phone number
-      # See http://www.telapi.com/docs/api/rest/carrier-services/carrier-lookup/
+      # See http://docs.telapi.com/v2/docs/carrier-lookup
       def lookup(phone_number)
         opts = { :PhoneNumber => phone_number }
         response = Network.get(['Lookups','Carrier'], opts)
