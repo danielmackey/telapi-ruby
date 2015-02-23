@@ -26,8 +26,8 @@ describe Telapi::Carrier do
   end
 
   describe ".lookup" do
-    it "calls api via http get and returns a Carrier resource" do
-      api_should_use(:get)
+    it "calls api via http post and returns a Carrier resource" do
+      api_should_use(:post)
       klass.lookup('17325551234').should be_a(klass)
     end
   end
